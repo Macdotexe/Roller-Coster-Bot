@@ -1,10 +1,7 @@
-import json
 
 name = str()
 
-person = dict()
-
-personJSON = None
+person = str()
 
 can_enter = bool()
 
@@ -40,10 +37,16 @@ while True:
         input()
         #caculate if able to ride and set can_enter accordingly
 
-    person = {"Name": name, "Height": height, "Age": age, "Can Enter": can_enter}
+    person = "Name: " + name + """
+    Height: """ + str(height) + """
+    Age: """ + str(age) + """
+    
+    
+    """
     #assign all info to person
 
-    with open(name + ".json", "w") as file:
-        json.dump(person, file, indent=4)
-        #dump info to .json file
+    file = open("People.txt", "a")
+    file.write(str(person))
+    file.close()
+    #write info to People.txt
         
