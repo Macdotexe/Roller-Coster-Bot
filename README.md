@@ -1,2 +1,3 @@
 # Roller-Coster-Bot
 there isnt much to it...
+run it using python launcher:)
